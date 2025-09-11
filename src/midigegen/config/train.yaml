@@ -1,0 +1,17 @@
+batch_size: 16
+num_workers: 2
+max_epochs: 100
+precision: 16  # 16 or 32
+devices: 1
+accumulate_grad_batches: 1
+val_check_interval: 1.0
+gradient_clip_val: 1.0
+lr: 1.0e-4
+weight_decay: 0.01
+warmup_steps: 2000
+checkpoint_dir: checkpoints
+samples_dir: samples
+log_every_n_steps: 50
+limit_train_batches: 1.0
+limit_val_batches: 1.0
+

@@ -1,0 +1,73 @@
+"""
+Basic project configuration for midigegen using PEP 621 with hatchling.
+This keeps installation simple for CI while supporting modern metadata.
+"""
+
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "midigegen"
+version = "0.1.0"
+description = "MIDI generative modeling toolkit: tokenize, train Transformer, and generate."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "AI MIDI", email = "example@example.com" }]
+keywords = ["MIDI", "music", "Transformer", "generative", "PyTorch", "Lightning"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "torch>=2.2.0",
+  "pytorch-lightning>=2.3.0",
+  "pretty_midi>=0.2.10",
+  "miditoolkit>=0.1.16",
+  "mido>=1.3.2",
+  "hydra-core>=1.3.2",
+  "omegaconf>=2.3.0",
+  "numpy>=1.26.0",
+  "scipy>=1.11.0",
+  "tqdm>=4.66.0",
+  "fastapi>=0.110.0",
+  "uvicorn>=0.27.0",
+  "pydantic>=2.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4.0",
+  "pytest-cov>=4.1.0",
+  "mypy>=1.9.0",
+  "flake8>=7.0.0",
+  "black>=24.3.0",
+  "isort>=5.13.0",
+  "pre-commit>=3.6.0",
+]
+
+[project.scripts]
+midigegen = "midigegen.cli:main"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.12"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+no_implicit_optional = true
+check_untyped_defs = true
+strict_equality = true
+ignore_missing_imports = true
+

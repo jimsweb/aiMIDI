@@ -1,0 +1,8 @@
+defaults:
+  - model: model
+  - data: data
+  - train: train
+
+experiment_name: default_exp
+seed: 42
+

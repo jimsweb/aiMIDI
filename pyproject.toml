@@ -8,7 +8,7 @@ requires = ["hatchling>=1.18.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "midigegen"
+name = "ai_midi"
 version = "0.1.0"
 description = "MIDI generative modeling toolkit: tokenize, train Transformer, and generate."
 readme = "README.md"
@@ -49,7 +49,7 @@ dev = [
 ]
 
 [project.scripts]
-midigegen = "midigegen.cli:main"
+ai_midi = "ai_midi.cli:main"
 
 [tool.black]
 line-length = 100
@@ -70,4 +70,3 @@ no_implicit_optional = true
 check_untyped_defs = true
 strict_equality = true
 ignore_missing_imports = true
-

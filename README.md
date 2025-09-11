@@ -1,6 +1,6 @@
-# midigegen
+# ai_midi
 
-midigegen is a Python 3.12+ toolkit to train and run generative MIDI models using a REMI-like tokenization, a GPT-style Transformer (PyTorch + PyTorch Lightning), and Hydra configuration. It provides CLI tools to preprocess datasets, train, and generate new MIDI samples, plus an optional FastAPI server.
+ai_midi is a Python 3.12+ toolkit to train and run generative MIDI models using a REMI-like tokenization, a GPT-style Transformer (PyTorch + PyTorch Lightning), and Hydra configuration. It provides CLI tools to preprocess datasets, train, and generate new MIDI samples, plus an optional FastAPI server.
 
 ## Features
 
@@ -29,25 +29,25 @@ Note: Installing `torch` may vary by platform/GPU. See https://pytorch.org/get-s
 2) Preprocess (optional – dataset also processes on the fly and caches):
 
 ```bash
-midigegen preprocess --midi-dir data/midi --out-cachedir data/cache
+ai_midi preprocess --midi-dir data/midi --out-cachedir data/cache
 ```
 
 3) Train with defaults:
 
 ```bash
-midigegen train
+ai_midi train
 ```
 
 Or specify config overrides (Hydra):
 
 ```bash
-midigegen train train.max_epochs=2 model.d_model=256 data.seq_len=256
+ai_midi train train.max_epochs=2 model.d_model=256 data.seq_len=256
 ```
 
 4) Generate from a short prompt:
 
 ```bash
-midigegen generate --prompt examples/sample_prompt.mid --out out.mid --max-tokens 256 --temp 1.0 --top_k 50 --top_p 0.95
+ai_midi generate --prompt examples/sample_prompt.mid --out out.mid --max-tokens 256 --temp 1.0 --top_k 50 --top_p 0.95
 ```
 
 ## Configuration
@@ -79,4 +79,3 @@ pytest -q
 ## License
 
 MIT. See `LICENSE`.
-

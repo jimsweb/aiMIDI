@@ -1,7 +1,5 @@
-"""
-Basic project configuration for midigegen using PEP 621 with hatchling.
-This keeps installation simple for CI while supporting modern metadata.
-"""
+# Basic project configuration for midigegen using PEP 621 with hatchling.
+# This keeps installation simple for CI while supporting modern metadata.
 
 [build-system]
 requires = ["hatchling>=1.18.0"]

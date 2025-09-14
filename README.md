@@ -3,6 +3,9 @@
 [![Python Version](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+<img width="1536" height="1024" alt="ae0905c4-a4c6-4f1a-82be-8cde466723c5" src="https://github.com/user-attachments/assets/cfa74dae-584c-44d4-9699-4ca44835290b" />
+
+
 `ai_midi` is a Python toolkit for training and generating MIDI with REMI-like tokenization, a GPT-style Transformer powered by PyTorch Lightning, and Hydra-based configuration. It ships with CLI tools to preprocess datasets, train models, sample new music, and even an optional FastAPI server.
 
 ## Table of Contents
